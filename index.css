@@ -1,0 +1,409 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+
+header,
+footer {
+  background: #d32f2f;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+}
+
+nav {
+  background: #b71c1c;
+  padding: 0.6rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.75;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+
+
+main {
+  padding: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  border-bottom: 3px solid #d32f2f;
+  padding-bottom: 0.4rem;
+  color: #b71c1c;
+}
+
+
+aside {
+  background: #fff3e0;
+  border-left: 4px solid #ff6f00;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 2rem;
+}
+
+aside h3 {
+  margin-top: 0;
+  color: #e65100;
+}
+
+
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 0.9rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+
+img[alt="Hambúrguer Veggie Grill"] {
+  max-width: 140px;
+}
+
+.card figcaption {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.preco {
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+
+
+#formItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: flex-end;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#formItem label {
+  flex-basis: 100%;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: -0.4rem;
+}
+
+#formItem select,
+#formItem input {
+  flex: 1 1 140px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+#formItem button {
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+#btnSubmit {
+  background: #d32f2f;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+#btnSubmit:hover {
+  background: #b71c1c;
+}
+
+#btnCancelar {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#btnCancelar:hover {
+  background: #bdbdbd;
+}
+
+
+
+.acoes-lista {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.acoes-lista button {
+  padding: 0.45rem 1rem;
+  border: 2px solid #d32f2f;
+  border-radius: 6px;
+  background: #fff;
+  color: #d32f2f;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.acoes-lista button:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+
+
+#listaItem {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+}
+
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.item-card.comprado span {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.item-info input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d32f2f;
+  cursor: pointer;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+
+.btn-remover {
+  background: #fce4e4;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: bold;
+  transition: background 0.15s;
+}
+
+.btn-remover:hover {
+  background: #ef9a9a;
+}
+
+
+.btn-editar {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: bold;
+  transition: background 0.15s;
+}
+
+.btn-editar:hover {
+  background: #90caf9;
+}
+
+
+
+#totalComprado {
+  font-size: 1.05rem;
+  color: #2e7d32;
+  background: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+}
+
+
+
+#formContato {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #b71c1c;
+  padding: 0 0.4rem;
+}
+
+#formContato label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0.6rem 0 0.2rem;
+}
+
+#formContato input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+#finalizarPedido,
+#formContato button[type="submit"] {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#finalizarPedido {
+  background: #ff6f00;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+#finalizarPedido:hover {
+  background: #e65100;
+}
+
+#formContato button[type="submit"] {
+  background: #d32f2f;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+#formContato button[type="submit"]:hover {
+  background: #b71c1c;
+}
+
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  #formItem {
+    flex-direction: column;
+  }
+
+  #formItem select,
+  #formItem input,
+  #formItem button {
+    width: 100%;
+  }
+}
